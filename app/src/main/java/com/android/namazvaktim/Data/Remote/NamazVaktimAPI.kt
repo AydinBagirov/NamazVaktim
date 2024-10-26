@@ -8,7 +8,7 @@ import retrofit2.http.Header
 
 interface NamazVaktimAPI {
     @GET("pray/all?data.city=istanbul")
-    fun getNamazVaktim(
+    suspend fun getNamazVaktim(
         @Header("content-type") type : String = CONTENT_TYPE,
         @Header("authorization") auth: String = API_KEY
     ): NamazVaktimDto
